@@ -1,15 +1,14 @@
 import Link from "next/link";
-import resume from "../public/resume.pdf";
 
 const NavBar = () => (
   <nav className="nav-container">
-    <div id="logo" className="logo-container">
+    <section id="logo" className="logo-container">
       <Link href="/">
         <a className="logo-text">Rizwan Choudhury</a>
       </Link>
-    </div>
+    </section>
 
-    <div id="menu" className="nav-menu">
+    <section id="menu" className="nav-menu">
       <ul className="menu-list">
         <li id="Home">
           <Link href="/">
@@ -22,7 +21,7 @@ const NavBar = () => (
           </Link>
         </li>
         <li id="Resume">
-          <Link href="/resume">
+          <Link href="/My_Resume.pdf">
             <a>Resume</a>
           </Link>
         </li>
@@ -32,7 +31,7 @@ const NavBar = () => (
           </Link>
         </li>
       </ul>
-    </div>
+    </section>
 
     <style jsx>{`
       @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap");
@@ -51,7 +50,7 @@ const NavBar = () => (
         align-items: center;
         justify-content: center;
         padding: 0 0.25em;
-        border-bottom: 3px ridge #fdf5e6;
+        border-bottom: 3px ridge #efefc8;
       }
       .logo-text {
         font-family: "Crimson Text", serif;
@@ -86,7 +85,7 @@ const NavBar = () => (
         background-color: purple;
       }
       #logo {
-        color: #fffff0;
+        color: #efefc8;
       }
       .menu-list li a {
         transition: 0.4s;

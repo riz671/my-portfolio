@@ -5,4 +5,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #bfbfbf;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  color: rgb(115, 115, 115);
+  text-decoration: underline;
 }

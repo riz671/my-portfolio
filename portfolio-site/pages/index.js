@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
+import Footer from "../components/footer.js";
 
 export default function Home() {
   return (
@@ -12,6 +13,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <NavBar />
+      </main>
+
+      <main>
+        <Footer />
       </main>
     </div>
   );
