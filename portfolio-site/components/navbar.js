@@ -10,26 +10,26 @@ const NavBar = () => (
 
     <section id="menu" className="nav-menu">
       <ul className="menu-list">
-        <li id="Home">
-          <Link href="/">
+        <Link href="/">
+          <li id="Home">
             <a>Home</a>
-          </Link>
-        </li>
-        <li id="Apps">
-          <Link href="/">
+          </li>
+        </Link>
+        <Link href="/">
+          <li id="Apps">
             <a>Apps</a>
-          </Link>
-        </li>
-        <li id="Resume">
-          <Link href="/My_Resume.pdf">
+          </li>
+        </Link>
+        <Link href="/My_Resume.pdf">
+          <li id="Resume">
             <a>Resume</a>
-          </Link>
-        </li>
-        <li id="Contact">
-          <Link href="/">
+          </li>
+        </Link>
+        <Link href="/">
+          <li id="Contact">
             <a>Contact Me</a>
-          </Link>
-        </li>
+          </li>
+        </Link>
       </ul>
     </section>
 
@@ -42,15 +42,22 @@ const NavBar = () => (
         width: 100vw;
         height: 5em;
         align-items: start;
-        background-color: #696969;
+        background-color: black;
+        color: #d3d3d3;
         align-items: center;
         padding: 0 2em;
       }
       .logo-container {
+        cursor: pointer;
         align-items: center;
         justify-content: center;
         padding: 0 0.25em;
         border-bottom: 3px ridge #efefc8;
+        transition: 0.3s;
+      }
+      .logo-container:hover {
+        color: gold;
+        border-bottom: 3px ridge gold;
       }
       .logo-text {
         font-family: "Crimson Text", serif;
@@ -71,25 +78,22 @@ const NavBar = () => (
         padding: 0 0.5rem;
         font-size: 1.5em;
         line-height: 1em;
-        padding: 0.25em 0.5em;
+        padding: 0.25em 0.25;
         margin-right: 4px;
-        opacity: 1;
-        transition: 0.4s;
-      }
-      .menu-list li:hover {
-        opacity: 0.6;
-        background-color: rgb(140, 140, 140);
-        border-radius: 2px;
-      }
-      .menu-list li::selection {
-        background-color: purple;
-      }
-      #logo {
-        color: #efefc8;
       }
       .menu-list li a {
         transition: 0.4s;
-        color: white;
+        padding: 0.25em;
+        transition: 0.3s;
+        cursor: pointer;
+        border-bottom: 0px solid black;
+      }
+      .menu-list li a:hover {
+        color: red;
+        border-bottom: 1px solid red;
+      }
+      .menu-list li a:active {
+        opacity: 0.6;
       }
     `}</style>
   </nav>

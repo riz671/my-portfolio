@@ -8,17 +8,18 @@ export default function Footer() {
         @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap");
         .footer-container {
           display: flex;
-          background-color: #696969;
+          background-color: black;
           width: 100vw;
           height: 5em;
           justify-content: center;
           align-items: center;
           top: 2em;
+          cursor: default;
         }
         .footer-text {
           font-family: "Crimson Text", serif;
           font-size: 1.25em;
-          color: #efefc8;
+          color: #d3d3d3;
         }
       `}</style>
     </footer>

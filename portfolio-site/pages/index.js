@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
 import Footer from "../components/footer.js";
+import About from "../components/about_me.js";
 
 export default function Home() {
   return (
@@ -11,13 +12,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <main className={styles.main}>
+      <section className={styles.main}>
         <NavBar />
-      </main>
+      </section>
 
-      <main>
+      <section id="about_me">
+        <About />
+      </section>
+
+      <section id="footer">
         <Footer />
-      </main>
+      </section>
     </div>
   );
 }
