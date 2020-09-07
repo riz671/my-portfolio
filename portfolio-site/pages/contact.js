@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
+import Contact from "../components/contact_form.js";
 import Footer from "../components/footer.js";
-import About from "../components/about_me.js";
 
-export default function Home() {
+const Contact_Page = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,13 +16,11 @@ export default function Home() {
         <NavBar />
       </section>
 
-      <section id="about_me">
-        <About />
-      </section>
-
-      <section>
-        <Footer />
+      <section id="contact me">
+        <Contact />
       </section>
     </div>
   );
-}
+};
+
+export default Contact_Page;

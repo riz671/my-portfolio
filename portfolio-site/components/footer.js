@@ -15,6 +15,7 @@ export default function Footer() {
           align-items: center;
           top: 2em;
           cursor: default;
+          margin-top: auto;
         }
         .footer-text {
           font-family: "Crimson Text", serif;
