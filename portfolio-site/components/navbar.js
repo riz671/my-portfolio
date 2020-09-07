@@ -25,7 +25,7 @@ const NavBar = () => (
             <a>Resume</a>
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/contact">
           <li id="Contact">
             <a>Contact Me</a>
           </li>

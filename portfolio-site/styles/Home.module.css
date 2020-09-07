@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Lexend+Peta&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 .container {
   min-height: 100vh;
@@ -8,8 +9,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  animation: fadein 1.5s;
+  transition-timing-function: ease-in;
 }
-
 .title_container {
   border: 1px solid black;
 }
@@ -21,4 +23,13 @@
   font-family: "Lexend Peta", sans-serif;
   border-bottom: 4px solid #737373;
   padding: 0 0.5em 0.2em 0.5em;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

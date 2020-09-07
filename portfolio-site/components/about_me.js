@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 
-const Home = () => {
+const About_Me = () => {
   return (
     <div className="home_container">
       <section className="about_container">
@@ -22,11 +22,13 @@ const Home = () => {
             </p>
 
             <p className="my_article_text">
-              The process of building has always been my passion. After
-              discovering software engineering, I began to wonder if I had found
-              my true calling. As I gained a deeper understanding behind
-              fullstack app development, I knew I wanted to build using software
-              engineering as my muse.
+              My greatest passion is to build. I inspire to engineer software
+              applications. Combine these two, you get my ultimate destination -
+              to design performant applications.
+            </p>
+
+            <p className="my_article_text">
+              Let's work together to build something great.
             </p>
           </div>
         </article>
@@ -66,7 +68,6 @@ const Home = () => {
           text-align: center;
           border-bottom: 3px solid black;
           padding: 0 1em;
-          max-width: 10em;
         }
         .about_header {
           font-family: "Open Sans", sans-serif;
@@ -85,4 +86,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About_Me;
