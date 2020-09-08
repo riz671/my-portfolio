@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import transporter from "./nodemailer.js";
+// import transporter from "./nodemailer.js";
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -8,25 +8,35 @@ const Contact_Form = () => {
   let [email, setEmail] = useState("");
   let [subject, setSubject] = useState("");
   let [message, setMessage] = useState("");
+  let [emailSent, setEmailSent] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const mailOptions = {
-      from: email,
-      to: "choudhuryrizwan97@gmail.com",
-      subject: subject,
-      text: message,
+
+    const data = {
+      name,
+      email,
+      subject,
+      message,
     };
 
-    console.log(mailOptions);
+    const axiosConfig = {
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    };
 
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Email sent: " + info.response);
-      }
-    });
+    // axios
+    //   .post("/contact/sendMail", data, axiosConfig)
+    //   .then(() => {
+    //     setEmailSent(true);
+    //     console.log("Email Submited!");
+    //   })
+    //   .catch((err) => {
+    //     setEmailSent(false);
+    //     console.log("Email Failed to Submit:", err);
+    //   });
   };
 
   return (
@@ -37,7 +47,7 @@ const Contact_Form = () => {
             <strong>Let's Talk</strong>
           </p>
         </div>
-        <form className="form_container" onSubmit={handleSubmit}>
+        <form className="form_container" onSubmit={(e) => handleSubmit(e)}>
           <div id="name" className="input_container">
             <input
               className="input_box"
