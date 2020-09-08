@@ -17,8 +17,8 @@ const About_Me = () => {
           <div className="my_article_text_container">
             <p className="my_article_text">
               I am Rizwan Choudhury, a Fullstack Software Engineer with
-              experience in Javascript, React, Node.js, Express, PostgreSQL and
-              more.
+              experience in Javascript, React, Nginx, Node.js, Express,
+              PostgreSQL and more.
             </p>
 
             <p className="my_article_text">

@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css";
+import transporter from "./nodemailer.js";
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -10,7 +11,22 @@ const Contact_Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // axios request to post data to my email w/ nodemailer "https://stadtteilliebe.de/blog/serverless-contact-form"
+    const mailOptions = {
+      from: email,
+      to: "choudhuryrizwan97@gmail.com",
+      subject: subject,
+      text: message,
+    };
+
+    console.log(mailOptions);
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
   };
 
   return (
@@ -21,7 +37,7 @@ const Contact_Form = () => {
             <strong>Let's Talk</strong>
           </p>
         </div>
-        <form className="form_container">
+        <form className="form_container" onSubmit={handleSubmit}>
           <div id="name" className="input_container">
             <input
               className="input_box"
@@ -69,6 +85,10 @@ const Contact_Form = () => {
                 console.log(message);
               }}
             />
+          </div>
+
+          <div className="submit_container">
+            <input className="submit_button" type="submit" value="Submit" />
           </div>
         </form>
       </section>
@@ -119,8 +139,32 @@ const Contact_Form = () => {
           border: 2px solid #72bcd4;
         }
         .message_box {
-          min-height: 12em;
+          min-height: 9em;
           max-width: 700px;
+        }
+        // ======================
+        // Submit Button
+        // ======================
+        .submit_container {
+          justify-content: center;
+          align-items: center;
+          margin-top: 6px;
+        }
+        .submit_button {
+          background-color: #d3d3d3;
+          color: #282828;
+          padding: 18px 40px;
+          border-radius: 30px;
+          font-size: 1.5em;
+          transition: 0.6s;
+          border: 0.1px solid black;
+        }
+        .submit_button:hover {
+          opacity: 0.6;
+        }
+        .submit_button:focus {
+          opacity: 0.45;
+          outline: none;
         }
       `}</style>
     </div>
