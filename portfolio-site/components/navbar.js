@@ -15,7 +15,7 @@ const NavBar = () => (
             <a>Home</a>
           </li>
         </Link>
-        <Link href="/">
+        <Link href="/application">
           <li id="Apps">
             <a>Apps</a>
           </li>

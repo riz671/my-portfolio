@@ -9,8 +9,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  animation: fadein 1.5s;
-  transition-timing-function: ease-in;
 }
 .title_container {
   border: 1px solid black;
@@ -23,6 +21,10 @@
   font-family: "Lexend Peta", sans-serif;
   border-bottom: 4px solid #737373;
   padding: 0 0.5em 0.2em 0.5em;
+}
+.fadeIn {
+  animation: fadein 1.5s;
+  transition-timing-function: ease-in;
 }
 
 @keyframes fadein {

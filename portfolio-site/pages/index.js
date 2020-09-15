@@ -16,13 +16,15 @@ export default function Home() {
         <NavBar />
       </section>
 
-      <section id="about_me">
-        <About />
-      </section>
+      <div className={styles.fadeIn}>
+        <section id="about_me">
+          <About />
+        </section>
 
-      <section>
-        <Footer />
-      </section>
+        <section>
+          <Footer />
+        </section>
+      </div>
     </div>
   );
 }
