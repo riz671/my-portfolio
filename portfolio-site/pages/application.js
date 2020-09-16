@@ -1,14 +1,15 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
-import Contact from "../components/contact_form.js";
 import Footer from "../components/footer.js";
+import About from "../components/about_me.js";
+import ApplicationContainer from "../components/application_container";
 
-const Contact_Page = () => {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Rizwan Choudhury</title>
+        <title>Rizwan Choudhury - Applications</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -17,8 +18,8 @@ const Contact_Page = () => {
       </section>
 
       <div className={styles.fadeIn}>
-        <section id="contact_me">
-          <Contact />
+        <section id="about_me">
+          <ApplicationContainer />
         </section>
 
         <section>
@@ -27,6 +28,4 @@ const Contact_Page = () => {
       </div>
     </div>
   );
-};
-
-export default Contact_Page;
+}
