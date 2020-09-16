@@ -1,4 +1,5 @@
 import styles from "../../styles/Home.module.css";
+import LinkButton from "./linkButtons.js";
 
 const SDC = () => {
   return (
@@ -6,26 +7,37 @@ const SDC = () => {
       <h2 className="project_title center_text underline_text">
         Glossier System Design
       </h2>
+
+      <LinkButton links="https://github.com/riz671/rizwan_service-reviews" />
+
       <img className="project_images" src="/SDC_pt1.png" alt="" />
       <img className="project_images" src="/SDC_pt2.png" alt="" />
       <img className="project_images" src="/SDC_pt3.png" alt="" />
       <img className="project_images" src="/SDC_pt4.png" alt="" />
 
       <p className="stack_list center_text">
-        React | JavaScript | CSS | HTML | Mongo/Mongoose | Jest
+        JavaScript | PostgreSQL | Mongoose | AWS EC2 | Nginx | loader.io | K6 |
+        New Relic
       </p>
+
+      <p className="summary center_text">
+        <i>
+          An inherited legacy codebase of Glossier that follows service-oriented
+          architecture principles. The backend has been designed to include an
+          optimized database and a load balancer to horizantal scale this app to
+          allow more user traffic into site without a degradation of service.
+        </i>
+      </p>
+
       <ul>
         <li>
-          Designed menu display for authentication, cart, and multiple
-          categories in the navigation bar with React and CSS.
+          Performed benchmarking optimizations to execute queries in under 5 ms
+          via B-tree indexing and inner joins.
         </li>
         <li>
-          Implemented search functionality that queried entries similar to user
-          input from database.
-        </li>
-        <li>
-          Combined 4 micro services with my team to display a product page
-          following service-oriented architecture.
+          Horizontally scaled to 4 EC2 instances linked via round robin load
+          balancing to increase throughput by 3.2X, while maintaining an average
+          latency of 95ms and a 0% error rate.
         </li>
       </ul>
 
@@ -47,6 +59,10 @@ const SDC = () => {
         .stack_list {
           font-size: 24px;
           word-spacing: 5px;
+        }
+        .summary {
+          font-size: 22px;
+          margin: 5px 40px 20px;
         }
         .center_text {
           text-align: center;

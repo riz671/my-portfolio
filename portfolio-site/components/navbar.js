@@ -1,11 +1,53 @@
+import Head from "next/head";
 import Link from "next/link";
 
 const NavBar = () => (
   <nav className="nav-container">
-    <section id="logo" className="logo-container">
-      <Link href="/">
-        <a className="logo-text">Rizwan Choudhury</a>
-      </Link>
+    <Head>
+      <title>Rizwan Choudhury</title>
+      <link rel="icon" href="/favicon.png" />
+    </Head>
+
+    <section id="social" className="social-menu">
+      <ul className="menu-list">
+        <li>
+          <a
+            className="logo-container"
+            href="https://github.com/riz671"
+            target="_blank"
+          >
+            <img
+              className="logo_img"
+              src="/github_logo.png"
+              alt="Github Logo"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a
+            className="logo-container"
+            href="https://www.linkedin.com/in/rizwan-choudhury-670335ab/"
+            target="_blank"
+          >
+            <img
+              className="logo_img"
+              src="/linkedin_logo.png"
+              alt="LinkedIn Logo"
+            />
+          </a>
+        </li>
+
+        <li>
+          <a
+            className="logo-container"
+            href="mailto:choudhuryrizwan97@gmail.com"
+            target="_blank"
+          >
+            <img className="logo_img" src="/mail_logo.png" alt="Mail Logo" />
+          </a>
+        </li>
+      </ul>
     </section>
 
     <section id="menu" className="nav-menu">
@@ -25,11 +67,11 @@ const NavBar = () => (
             <a>Resume</a>
           </li>
         </Link>
-        <Link href="/contact">
+        {/* <Link href="/contact">
           <li id="Contact">
             <a>Contact Me</a>
           </li>
-        </Link>
+        </Link> */}
       </ul>
     </section>
 
@@ -48,52 +90,44 @@ const NavBar = () => (
         padding: 0 2em;
       }
       .logo-container {
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        padding: 0 0.25em;
-        border-bottom: 3px ridge #efefc8;
-        transition: 0.3s;
+        height: 50px;
+        width: 50px;
+        border-bottom: 1px solid transparent;
       }
       .logo-container:hover {
-        color: gold;
-        border-bottom: 3px ridge gold;
+        border-bottom: 1px solid red;
       }
-      .logo-text {
-        font-family: "Crimson Text", serif;
-        height: 100%;
-        font-size: 2em;
+      .logo_img {
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
       }
       .nav-menu {
         align-items: center;
-        justify-context: flex-end;
       }
       .menu-list {
         list-style-type: none;
         display: flex;
         flex-direction: row;
         margin: 0 auto;
+        padding: 0 30px;
       }
       .menu-list li {
         padding: 0 0.5rem;
         font-size: 1.5em;
         line-height: 1em;
-        padding: 0.25em 0.25;
+        padding: 0.1em 0.1em;
         margin-right: 4px;
       }
       .menu-list li a {
-        transition: 0.4s;
-        padding: 0.25em;
-        transition: 0.3s;
         cursor: pointer;
-        border-bottom: 0px solid black;
+        padding: 0 10px 5px 10px;
+        border-bottom: 1px solid transparent;
+        transition: 0.4s;
       }
       .menu-list li a:hover {
         color: red;
         border-bottom: 1px solid red;
-      }
-      .menu-list li a:active {
-        opacity: 0.6;
       }
     `}</style>
   </nav>

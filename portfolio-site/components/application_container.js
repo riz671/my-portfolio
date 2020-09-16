@@ -14,15 +14,15 @@ const ApplicationContainer = () => {
         </div>
 
         <section className="main_project_container">
+          <MVP />
+        </section>
+
+        <section className="main_project_container">
           <SDC />
         </section>
 
         <section className="main_project_container">
           <FEC />
-        </section>
-
-        <section className="main_project_container">
-          <MVP />
         </section>
       </section>
 
@@ -60,7 +60,13 @@ const ApplicationContainer = () => {
           background: #dcdcdc;
           border: 4px solid black;
           border-radius: 30px;
+          box-shadow: 5px 5px transparent;
+          transition: 0.3s;
         }
+        .main_project_container:hover {
+          box-shadow: 5px 5px #999999;
+        }
+
         .project_container {
           height: 500px;
           width: 100%;

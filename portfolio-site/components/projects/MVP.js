@@ -1,4 +1,5 @@
 import styles from "../../styles/Home.module.css";
+import LinkButton from "./linkButtons.js";
 
 const MVP = () => {
   return (
@@ -6,6 +7,9 @@ const MVP = () => {
       <h2 className="project_title center_text underline_text">
         Know It All - Trivia Game
       </h2>
+
+      <LinkButton links="https://github.com/riz671/KnowItAll" />
+
       <iframe
         className="vid_container"
         width="50%"
@@ -15,9 +19,19 @@ const MVP = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
+
       <p className="stack_list center_text">
         React-Native | Expo | IOS development | Android development | Javascript
       </p>
+
+      <p className="summary center_text">
+        <i>
+          A local based trivia game meant to bring people closer together.
+          People form into teams to compete and answer as many questions as they
+          can to be crowned as the "team to know it all".
+        </i>
+      </p>
+
       <ul>
         <li>
           Implemented functionality to update and store team data in state.
@@ -28,6 +42,7 @@ const MVP = () => {
           displayed team data via conditional rendering.
         </li>
       </ul>
+
       <style jsx>{`
         .project_container {
           width: 100%;
@@ -50,6 +65,10 @@ const MVP = () => {
         }
         .underline_text {
           text-decoration: underline;
+        }
+        .summary {
+          font-size: 22px;
+          margin: 5px 40px 20px;
         }
         ul {
           margin: 0 25px 30px 25px;
