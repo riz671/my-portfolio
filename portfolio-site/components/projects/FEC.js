@@ -1,4 +1,5 @@
 import styles from "../../styles/Home.module.css";
+import LinkButton from "./linkButtons.js";
 
 const Front_End = () => {
   return (
@@ -6,6 +7,9 @@ const Front_End = () => {
       <h2 className="project_title center_text underline_text">
         Alo Yoga Front End Replica
       </h2>
+
+      <LinkButton links="https://github.com/riz671/rizwan-service-actual" />
+
       <iframe
         className="vid_container"
         width="50%"
@@ -15,9 +19,15 @@ const Front_End = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
+
       <p className="stack_list center_text">
         React | JavaScript | CSS | HTML | Mongoose | Jest
       </p>
+
+      <p className="summary center_text">
+        <i>Replica of Alo Yoga's product page site.</i>
+      </p>
+
       <ul>
         <li>
           Designed menu display for authentication, cart, and multiple
@@ -55,6 +65,10 @@ const Front_End = () => {
         }
         .underline_text {
           text-decoration: underline;
+        }
+        .summary {
+          font-size: 22px;
+          margin: 5px 40px 20px;
         }
         ul {
           margin: 0 25px 30px 25px;

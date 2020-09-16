@@ -8,11 +8,6 @@ import ApplicationContainer from "../components/application_container";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Rizwan Choudhury - Applications</title>
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-
       <section id="navbar">
         <NavBar />
       </section>
