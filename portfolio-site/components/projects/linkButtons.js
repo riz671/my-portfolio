@@ -1,11 +1,11 @@
 import styles from "../../styles/Home.module.css";
 
-const LinkButtons = ({ links }) => {
+const LinkButtons = ({ links, name }) => {
   return (
     <div className={styles.githubButtonsContainer}>
       <button className={styles.githubButtons}>
         <a href={links} target="_blank">
-          GO TO REPO
+          {name}
         </a>
       </button>
     </div>

@@ -92,10 +92,10 @@ const NavBar = () => (
       .logo-container {
         height: 50px;
         width: 50px;
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid transparent;
       }
       .logo-container:hover {
-        border-bottom: 1px solid red;
+        border-bottom: 2px solid red;
       }
       .logo_img {
         height: 50px;
@@ -122,12 +122,11 @@ const NavBar = () => (
       .menu-list li a {
         cursor: pointer;
         padding: 0 10px 5px 10px;
-        border-bottom: 1px solid transparent;
+        border-bottom: 2px solid transparent;
         transition: 0.4s;
       }
       .menu-list li a:hover {
-        color: red;
-        border-bottom: 1px solid red;
+        border-bottom: 2px solid red;
       }
     `}</style>
   </nav>

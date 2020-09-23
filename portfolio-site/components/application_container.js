@@ -43,15 +43,14 @@ const ApplicationContainer = () => {
           width: 90vw;
         }
         .apps_header_container {
-          margin-bottom: 0.3em;
           text-align: center;
           border-bottom: 3px solid black;
           padding: 0 1em;
         }
         .apps_header {
           font-family: "Open Sans", sans-serif;
-          font-size: 1.5em;
-          margin-bottom: 0.5em;
+          font-size: 2em;
+          margin-bottom: 0.25em;
         }
         .main_project_container {
           justify-content: center;
@@ -64,7 +63,7 @@ const ApplicationContainer = () => {
           transition: 0.3s;
         }
         .main_project_container:hover {
-          box-shadow: 5px 5px #999999;
+          box-shadow: 10px 8px #add8e6;
         }
 
         .project_container {

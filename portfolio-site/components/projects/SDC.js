@@ -8,8 +8,6 @@ const SDC = () => {
         Glossier System Design
       </h2>
 
-      <LinkButton links="https://github.com/riz671/rizwan_service-reviews" />
-
       <img className="project_images" src="/SDC_pt1.png" alt="" />
       <img className="project_images" src="/SDC_pt2.png" alt="" />
       <img className="project_images" src="/SDC_pt3.png" alt="" />
@@ -40,6 +38,11 @@ const SDC = () => {
           latency of 95ms and a 0% error rate.
         </li>
       </ul>
+
+      <LinkButton
+        links="https://github.com/riz671/Glossier-system_design"
+        name="GO TO SYSTEM DESIGNS REPO"
+      />
 
       <style jsx>{`
         .project_container {
