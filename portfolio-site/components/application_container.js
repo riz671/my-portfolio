@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import FEC from "./projects/FEC.js";
 import SDC from "./projects/SDC.js";
 import MVP from "./projects/MVP.js";
+import LinkButton from "./projects/linkButtons.js";
 
 const ApplicationContainer = () => {
   return (
@@ -12,6 +13,12 @@ const ApplicationContainer = () => {
             <strong>Apps</strong>
           </p>
         </div>
+
+        <br />
+        <LinkButton
+          links="https://github.com/riz671/my-portfolio/tree/master/portfolio-site"
+          name="GO TO PORTFOLIO REPO"
+        />
 
         <section className="main_project_container">
           <MVP />
@@ -54,7 +61,7 @@ const ApplicationContainer = () => {
         }
         .main_project_container {
           justify-content: center;
-          margin: 3em 0;
+          margin: 1em 0 3em 0;
           width: 100%;
           background: #dcdcdc;
           border: 4px solid black;
