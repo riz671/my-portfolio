@@ -8,8 +8,6 @@ const Front_End = () => {
         Alo Yoga Front End Replica
       </h2>
 
-      <LinkButton links="https://github.com/riz671/rizwan-service-actual" />
-
       <iframe
         className="vid_container"
         width="50%"
@@ -42,6 +40,16 @@ const Front_End = () => {
           following service-oriented architecture.
         </li>
       </ul>
+
+      <LinkButton
+        links="https://github.com/riz671/AloYoga-navbar_module"
+        name="GO TO NAV BAR MODULE REPO"
+      />
+
+      <LinkButton
+        links="https://github.com/riz671/AloYoga-proxy_setup"
+        name="GO TO PROXY SETUP REPO"
+      />
 
       <style jsx>{`
         .project_container {

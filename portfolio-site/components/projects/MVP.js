@@ -8,8 +8,6 @@ const MVP = () => {
         Know It All - Trivia Game
       </h2>
 
-      <LinkButton links="https://github.com/riz671/KnowItAll" />
-
       <iframe
         className="vid_container"
         width="50%"
@@ -26,9 +24,8 @@ const MVP = () => {
 
       <p className="summary center_text">
         <i>
-          A local based trivia game meant to bring people closer together.
-          People form into teams to compete and answer as many questions as they
-          can to be crowned as the "team to know it all".
+          A local based trivia game meant to bring people closer together in
+          such trying times.
         </i>
       </p>
 
@@ -42,6 +39,11 @@ const MVP = () => {
           displayed team data via conditional rendering.
         </li>
       </ul>
+
+      <LinkButton
+        links="https://github.com/riz671/KnowItAll"
+        name="GO TO TRIVIA GAME REPO"
+      />
 
       <style jsx>{`
         .project_container {
