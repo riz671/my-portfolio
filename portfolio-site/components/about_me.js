@@ -51,6 +51,7 @@ const About_Me = () => {
           justify-content: center;
           align-items: center;
           width: 90vw;
+          margin-bottom: 2em;
         }
         #my_pic {
           height: 200px;
