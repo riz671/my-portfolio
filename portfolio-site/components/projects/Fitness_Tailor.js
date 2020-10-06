@@ -1,48 +1,38 @@
 import styles from "../../styles/Home.module.css";
 import LinkButton from "./linkButtons.js";
 
-const MVP = () => {
+const Fitness_Tailor = () => {
   return (
-    <article className="project_container" id="MVP">
+    <article className="project_container" id="Fitness_Tailor">
       <h2 className="project_title center_text underline_text">
-        Know It All - Trivia Game
+        Fitness Tailor
       </h2>
 
-      <iframe
-        className="vid_container"
-        width="50%"
-        height="380"
-        src="https://www.youtube.com/embed/TqH_djGYrB0"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <p className="temp_message center_text">Demo Video will be up soon!</p>
 
       <p className="stack_list center_text">
-        React-Native | Expo | IOS development | Android development | Javascript
+        React-Native | React-Hooks | React-Navigation | Expo | Redux | Redux
+        Thunk | Firebase | RESTful API
       </p>
-
       <p className="summary center_text">
-        <i>
-          A local based trivia game meant to bring people closer together in
-          such trying times.
-        </i>
+        Be your best self as <em>you</em> tailor make your fitness journey.
       </p>
 
       <ul>
+        <li>Improved code readability and reusability with React-hooks.</li>
         <li>
-          Implemented functionality to update and store team data in state.
+          Integrated Redux as state management strategy to simplify state logic.
         </li>
-        <li>Dynamically rendered team data from state into stats box.</li>
         <li>
-          Designed minimalistic and detailed view of the stats box that
-          displayed team data via conditional rendering.
+          Designed UI for the Recipe Finder component and implemented
+          asynchronous back-end logic to query and store data from USDA’s
+          nutritional API via Redux Thunk.
         </li>
       </ul>
 
       <LinkButton
-        links="https://github.com/riz671/KnowItAll"
-        name="GO TO TRIVIA GAME REPO"
+        links="https://github.com/fitness-tailor/fitness-tailor-client"
+        name="GO TO FITNESS TAILOR REPO"
       />
 
       <style jsx>{`
@@ -57,6 +47,10 @@ const MVP = () => {
         .project_title {
           font-size: 36px;
           letter-spacing: 1px;
+        }
+        .temp_message {
+          font-size: 30px;
+          margin-bottom: 30px;
         }
         .stack_list {
           font-size: 24px;
@@ -85,4 +79,4 @@ const MVP = () => {
   );
 };
 
-export default MVP;
+export default Fitness_Tailor;

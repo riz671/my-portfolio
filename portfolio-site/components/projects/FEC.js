@@ -67,6 +67,7 @@ const Front_End = () => {
         .stack_list {
           font-size: 24px;
           word-spacing: 5px;
+          margin: 10px 40px;
         }
         .center_text {
           text-align: center;

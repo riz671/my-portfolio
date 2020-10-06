@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import FEC from "./projects/FEC.js";
 import SDC from "./projects/SDC.js";
 import MVP from "./projects/MVP.js";
+import Fitness_Tailor from "./projects/Fitness_Tailor.js";
 import LinkButton from "./projects/linkButtons.js";
 
 const ApplicationContainer = () => {
@@ -22,6 +23,10 @@ const ApplicationContainer = () => {
 
         <section className="main_project_container">
           <MVP />
+        </section>
+
+        <section className="main_project_container">
+          <Fitness_Tailor />
         </section>
 
         <section className="main_project_container">
