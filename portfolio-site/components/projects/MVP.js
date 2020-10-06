@@ -3,7 +3,7 @@ import LinkButton from "./linkButtons.js";
 
 const MVP = () => {
   return (
-    <article className="project_container" id="MVP">
+    <article className="project_container">
       <h2 className="project_title center_text underline_text">
         Know It All - Trivia Game
       </h2>

@@ -1,9 +1,9 @@
 import styles from "../../styles/Home.module.css";
 import LinkButton from "./linkButtons.js";
 
-const Front_End = () => {
+const FEC = () => {
   return (
-    <article className="project_container" id="Front_End">
+    <article className="project_container">
       <h2 className="project_title center_text underline_text">
         Alo Yoga Front End Replica
       </h2>
@@ -91,4 +91,4 @@ const Front_End = () => {
   );
 };
 
-export default Front_End;
+export default FEC;

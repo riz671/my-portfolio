@@ -21,19 +21,46 @@ const ApplicationContainer = () => {
           name="GO TO PORTFOLIO REPO"
         />
 
-        <section className="main_project_container">
+        <div className="navigate_buttons_container">
+          <div>
+            <LinkButton links="#MVP" name="Browse Know It All" target="_self" />
+          </div>
+          <div>
+            <LinkButton
+              links="#Fitness_Tailor"
+              name="Browse Fitness Tailor"
+              target="_self"
+            />
+          </div>
+          <div>
+            <LinkButton
+              links="#SDC"
+              name="Browse Glossier's System Design"
+              target="_self"
+            />
+          </div>
+          <div>
+            <LinkButton
+              links="#FEC"
+              name="Browse Alo Yoga Product Detail"
+              target="_self"
+            />
+          </div>
+        </div>
+
+        <section className="main_project_container" id="MVP">
           <MVP />
         </section>
 
-        <section className="main_project_container">
+        <section className="main_project_container" id="Fitness_Tailor">
           <Fitness_Tailor />
         </section>
 
-        <section className="main_project_container">
+        <section className="main_project_container" id="SDC">
           <SDC />
         </section>
 
-        <section className="main_project_container">
+        <section className="main_project_container" id="FEC">
           <FEC />
         </section>
       </section>
@@ -46,6 +73,13 @@ const ApplicationContainer = () => {
           margin: 1em 0 2em 0;
           justify-content: center;
           align-items: center;
+        }
+        .navigate_buttons_container {
+          display: flex;
+          flex-direction: row;
+        }
+        .navigate_buttons_container div {
+          margin: 10px 20px;
         }
         .apps_container {
           display: flex;
@@ -66,7 +100,7 @@ const ApplicationContainer = () => {
         }
         .main_project_container {
           justify-content: center;
-          margin: 1em 0 3em 0;
+          margin: 2em 0 3em 0;
           width: 100%;
           background: #dcdcdc;
           border: 4px solid black;

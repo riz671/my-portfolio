@@ -3,7 +3,7 @@ import LinkButton from "./linkButtons.js";
 
 const SDC = () => {
   return (
-    <article className="project_container" id="SDC">
+    <article className="project_container">
       <h2 className="project_title center_text underline_text">
         Glossier System Design
       </h2>

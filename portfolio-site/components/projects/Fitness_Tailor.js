@@ -3,7 +3,7 @@ import LinkButton from "./linkButtons.js";
 
 const Fitness_Tailor = () => {
   return (
-    <article className="project_container" id="Fitness_Tailor">
+    <article className="project_container">
       <h2 className="project_title center_text underline_text">
         Fitness Tailor
       </h2>
