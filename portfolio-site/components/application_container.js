@@ -66,14 +66,6 @@ const ApplicationContainer = () => {
       </section>
 
       <style jsx>{`
-        .home_container {
-          display: flex;
-          flex-direction: column;
-          width: 100vw;
-          margin: 1em 0 2em 0;
-          justify-content: center;
-          align-items: center;
-        }
         .navigate_buttons_container {
           display: flex;
           flex-direction: row;

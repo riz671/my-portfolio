@@ -1,3 +1,4 @@
+import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
 import Footer from "../components/footer.js";
@@ -10,7 +11,7 @@ export default function Home() {
         <NavBar />
       </section>
 
-      <div className={styles.fadeIn}>
+      <div>
         <section id="about_me">
           <About />
         </section>
