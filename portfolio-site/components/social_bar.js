@@ -11,19 +11,22 @@ const SocialBar = () => {
 
       <ul className="social-menu">
         <li className="linkedIn">
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/rizwan-choudhury/"
+            target="_blank"
+          >
             <i className="fab fa-linkedin fa-lg"></i>
           </a>
         </li>
 
         <li className="github">
-          <a href="#">
+          <a href="https://github.com/riz671" target="_blank">
             <i className="fab fa-github fa-lg"></i>
           </a>
         </li>
 
         <li className="e-mail">
-          <a href="#">
+          <a href="mailto:choudhuryrizwan97@gmail.com" target="_blank">
             <i className="fas fa-envelope fa-lg"></i>
           </a>
         </li>

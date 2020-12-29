@@ -1,13 +1,17 @@
 import styles from "../styles/Home.module.css";
+import JobCatalogue from "./job_catalogue.js";
 
-const About_Me = () => {
+const HomeSection = () => {
   return (
     <div className="home_container">
       <section className="about_container">
+        <p className="top_title">Rizwan Choudhury</p>
+
+        <JobCatalogue />
+
         <div className="pic_container">
           <img id="my_pic" src="/Self_Pic.png" alt="my picture" />
         </div>
-
         <article className="article_container">
           <div className="article_title_container">
             <p className="article_title">Hi, I'm Rizwan. Nice to meet you!</p>
@@ -15,10 +19,10 @@ const About_Me = () => {
 
           <div className="article_main_container">
             <p className="article_main">
-              I enjoy conjuring novel concepts in my head and see what can be
-              done to both implement and improve upon them. I also love to build
-              easy-to-use and stylish interfaces with elegant user experiences
-              while delivering clear and concise code.
+              I am a software engineer who enjoys brainstorming ideas in my head
+              and bringing them to life. When working, I emphasize on building
+              easy-to-use and stylish features with elegant user interface while
+              delivering clear and concise code.
               <br />
               <br />
               I cherish working with others even more than working by myself.
@@ -46,12 +50,20 @@ const About_Me = () => {
           background-size: cover;
         }
         #my_pic {
-          height: 250px;
+          height: 150px;
           border-radius: 150px;
           z-index: 10;
         }
+        .top_title {
+          font-size: 4em;
+          text-align: center;
+          padding: 0;
+          width: 80%;
+          font-family: "Lora", serif;
+          margin: 3vw;
+        }
         .pic_container {
-          margin: 1vw 0;
+          margin: 5vw 0 2vw 0;
           animation: fadein 1s ease-out;
         }
         .article_container {
@@ -62,7 +74,7 @@ const About_Me = () => {
           animation: fadein 1s ease-out;
         }
         .article_title_container {
-          margin-bottom: 0.3em;
+          margin: 1em 0 0.4em 0;
           width: 80%;
           text-align: center;
           padding: 0 1em;
@@ -77,6 +89,7 @@ const About_Me = () => {
         .article_main {
           font-size: 1.2em;
           text-align: center;
+          margin: 0;
         }
 
         @keyframes fadein {
@@ -93,6 +106,10 @@ const About_Me = () => {
             height: 180px;
             border-radius: 90px;
             z-index: 10;
+          }
+          .top_title {
+            font-size: 1.5em;
+            font-family: "Lora", serif;
           }
           .article_title_container {
             text-align: center;
@@ -111,4 +128,4 @@ const About_Me = () => {
   );
 };
 
-export default About_Me;
+export default HomeSection;

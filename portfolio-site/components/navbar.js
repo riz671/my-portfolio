@@ -123,6 +123,11 @@ const NavBar = () => {
           .nav-container {
             padding: 0 2em;
           }
+          .nav-container::after {
+            background: white;
+            opacity: 0.8;
+            z-index: 3;
+          }
           .logo-container {
             flex: 1;
           }
@@ -180,25 +185,24 @@ const NavBar = () => {
           }
           .menu-list {
             position: fixed;
-            border: 1px solid #9fd1b3;
-            right: 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 70vw;
             height: 100vh;
+            right: 0;
             top: 0;
-            background-color: #9fd1b3;
+            margin: 0 auto;
+            padding: 0;
+            border-left: 0.2px solid #999999;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 15;
             background: -webkit-linear-gradient(
               360deg,
               #83c39d 30%,
               #9fd1b3 70%
             );
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 70vw;
-            margin: 0 auto;
-            padding: 0;
-            transform: translateX(100%);
-            transition: transform 0.5s ease-in-out;
-            z-index: 15;
           }
           .menu-list li {
             font-size: 1.25em;
