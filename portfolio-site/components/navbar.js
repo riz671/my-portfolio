@@ -18,7 +18,7 @@ const NavBar = () => {
 
       <div className="logo-container">
         <a href="/">
-          <h2 className="logo-title">Rizwan Choudhury</h2>
+          <h2 className="logo-title">RC</h2>
         </a>
       </div>
 
@@ -78,8 +78,12 @@ const NavBar = () => {
           padding: 0 4em;
         }
         .logo-title {
-          font-family: "Poppins", sans-serif;
+          font-family: "Dancing Script", cursive;
           font-size: 2em;
+          width: min-content;
+          border-radius: 15px;
+          background: #6699a3;
+          padding: 8px 12px;
         }
         .btn-hamburger {
           display: none;
@@ -88,7 +92,8 @@ const NavBar = () => {
           display: none;
         }
         .responsive-nav-menu {
-          align-items: center;
+          display: block;
+          flex: 0;
         }
         .menu-list {
           list-style-type: none;
@@ -107,7 +112,7 @@ const NavBar = () => {
           margin: 0 10px;
         }
         .menu-list li a:hover {
-          border-bottom: 2px solid red;
+          border-bottom: 2px solid #99c2bc;
         }
 
         @media screen and (max-width: 900px) {
@@ -122,11 +127,6 @@ const NavBar = () => {
           }
           .nav-container {
             padding: 0 2em;
-          }
-          .nav-container::after {
-            background: white;
-            opacity: 0.8;
-            z-index: 3;
           }
           .logo-container {
             flex: 1;
