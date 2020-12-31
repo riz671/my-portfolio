@@ -14,9 +14,7 @@ const HomeSection = () => {
         </div>
 
         <div className="article_title_container">
-          <p className="article_title">
-            Hi, I'm Rizwan and I am a software engineer. Nice to meet you!
-          </p>
+          <p className="article_title">Hi, I'm Rizwan. Nice to meet you!</p>
         </div>
       </section>
 
@@ -59,14 +57,6 @@ const HomeSection = () => {
           font-size: 1.6em;
           margin-bottom: 0.5em;
         }
-        .article_main_container {
-          width: 80%;
-        }
-        .article_main {
-          font-size: 1.2em;
-          text-align: center;
-          margin: 0;
-        }
 
         @keyframes fadein {
           from {
@@ -96,9 +86,6 @@ const HomeSection = () => {
           .article_title {
             font-size: 1.1em;
             margin-bottom: 0.5em;
-          }
-          .article_main {
-            font-size: 0.9em;
           }
         }
       `}</style>

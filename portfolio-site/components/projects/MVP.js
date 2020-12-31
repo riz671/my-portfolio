@@ -42,7 +42,7 @@ const MVP = () => {
 
       <LinkButton
         links="https://github.com/riz671/KnowItAll"
-        name="GO TO TRIVIA GAME REPO"
+        name="GO TO 'KNOW IT ALL' REPO"
       />
 
       <style jsx>{`

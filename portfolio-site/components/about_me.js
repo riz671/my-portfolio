@@ -81,6 +81,13 @@ const AboutSection = () => {
         }
         #about_pic {
           width: 80%;
+          border-radius: 25px;
+          border: 0.5px solid #70bdd7;
+          box-shadow: 5px 4px transparent;
+          transition: 0.5s;
+        }
+        #about_pic:hover {
+          box-shadow: 10px 10px #28768f;
         }
 
         @keyframes fadein {

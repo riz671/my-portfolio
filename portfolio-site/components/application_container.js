@@ -11,41 +11,31 @@ const ApplicationContainer = () => {
       <section className="apps_container">
         <div className="apps_header_container">
           <p className="apps_header">
-            <strong>Apps</strong>
+            <strong>My Applications</strong>
           </p>
         </div>
 
-        <br />
-        <LinkButton
-          links="https://github.com/riz671/my-portfolio/tree/master/portfolio-site"
-          name="GO TO PORTFOLIO REPO"
-        />
-
         <div className="navigate_buttons_container">
-          <div>
-            <LinkButton links="#MVP" name="Browse Know It All" target="_self" />
-          </div>
-          <div>
-            <LinkButton
-              links="#Fitness_Tailor"
-              name="Browse Fitness Tailor"
-              target="_self"
-            />
-          </div>
-          <div>
-            <LinkButton
-              links="#SDC"
-              name="Browse Glossier's System Design"
-              target="_self"
-            />
-          </div>
-          <div>
-            <LinkButton
-              links="#FEC"
-              name="Browse Alo Yoga Product Detail"
-              target="_self"
-            />
-          </div>
+          <LinkButton
+            links="#MVP"
+            name="Scroll to 'Know It All'"
+            target="_self"
+          />
+          <LinkButton
+            links="#Fitness_Tailor"
+            name="Scroll to 'Fitness Tailor'"
+            target="_self"
+          />
+          <LinkButton
+            links="#SDC"
+            name="Scroll to 'Glossier's System Design'"
+            target="_self"
+          />
+          <LinkButton
+            links="#FEC"
+            name="Scroll to 'Alo Yoga Product Detail'"
+            target="_self"
+          />
         </div>
 
         <section className="main_project_container" id="MVP">
@@ -68,10 +58,10 @@ const ApplicationContainer = () => {
       <style jsx>{`
         .navigate_buttons_container {
           display: flex;
+          flex-wrap: wrap;
           flex-direction: row;
-        }
-        .navigate_buttons_container div {
-          margin: 10px 20px;
+          justify-content: center;
+          margin: 2vh 2vw;
         }
         .apps_container {
           display: flex;
@@ -79,16 +69,17 @@ const ApplicationContainer = () => {
           justify-content: center;
           align-items: center;
           width: 90vw;
+          margin: 3vh 5vw;
         }
         .apps_header_container {
+          margin: 1em 0;
+          border-bottom: 1.5px solid black;
           text-align: center;
-          border-bottom: 3px solid black;
           padding: 0 1em;
         }
         .apps_header {
-          font-family: "Open Sans", sans-serif;
-          font-size: 2em;
-          margin-bottom: 0.25em;
+          font-size: 1.6em;
+          margin-bottom: 0.5em;
         }
         .main_project_container {
           justify-content: center;
