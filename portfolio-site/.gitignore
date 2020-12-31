@@ -37,3 +37,4 @@ yarn-error.log*
 components/nodemailer.js
 
 notes.txt
+public

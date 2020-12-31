@@ -3,7 +3,7 @@ import JobCatalogue from "./job_catalogue.js";
 
 const HomeSection = () => {
   return (
-    <div className="home_container">
+    <div className="main_container">
       <section className="about_container">
         <p className="top_title">Rizwan Choudhury</p>
 
@@ -20,8 +20,6 @@ const HomeSection = () => {
         </div>
       </section>
 
-      <section id="branding video"></section>
-
       <style jsx>{`
         .about_container {
           display: flex;
@@ -30,10 +28,8 @@ const HomeSection = () => {
           align-items: center;
           opacity: 0.9;
           padding: 3vh 0 5vh 0;
-          min-height: 85vh;
-          max-height: 85vh;
-          background: -webkit-linear-gradient(360deg, #a6c9ae 40%, #cce0d1 60%);
-          background-size: cover;
+          min-height: 90vh;
+          max-height: 90vh;
         }
         #my_pic {
           height: 200px;

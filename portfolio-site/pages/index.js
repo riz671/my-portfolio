@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar.js";
 import Footer from "../components/footer.js";
 import HomeSection from "../components/home_section.js";
+import AboutSection from "../components/about_me.js";
 
 export default function Home() {
   return (
@@ -12,8 +13,12 @@ export default function Home() {
       </section>
 
       <div>
-        <section id="about_me">
+        <section id="home">
           <HomeSection />
+        </section>
+
+        <section id="about_me">
+          <AboutSection />
         </section>
 
         <section>
