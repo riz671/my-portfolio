@@ -12,28 +12,12 @@ const HomeSection = () => {
         <div className="pic_container">
           <img id="my_pic" src="/Self_Pic.png" alt="my picture" />
         </div>
-        <article className="article_container">
-          <div className="article_title_container">
-            <p className="article_title">Hi, I'm Rizwan. Nice to meet you!</p>
-          </div>
 
-          <div className="article_main_container">
-            <p className="article_main">
-              I am a software engineer who enjoys brainstorming ideas in my head
-              and bringing them to life. When working, I emphasize on building
-              easy-to-use and stylish features with elegant user interface while
-              delivering clear and concise code.
-              <br />
-              <br />
-              I cherish working with others even more than working by myself.
-              There is nothing like the thrill of evolving an idea to make it
-              even better than before.
-              <br />
-              <br />
-              Let's work together to build something great.
-            </p>
-          </div>
-        </article>
+        <div className="article_title_container">
+          <p className="article_title">
+            Hi, I'm Rizwan and I am a software engineer. Nice to meet you!
+          </p>
+        </div>
       </section>
 
       <section id="branding video"></section>
@@ -46,12 +30,14 @@ const HomeSection = () => {
           align-items: center;
           opacity: 0.9;
           padding: 3vh 0 5vh 0;
+          min-height: 85vh;
+          max-height: 85vh;
           background: -webkit-linear-gradient(360deg, #a6c9ae 40%, #cce0d1 60%);
           background-size: cover;
         }
         #my_pic {
-          height: 150px;
-          border-radius: 150px;
+          height: 200px;
+          border-radius: 100px;
           z-index: 10;
         }
         .top_title {
@@ -66,18 +52,12 @@ const HomeSection = () => {
           margin: 5vw 0 2vw 0;
           animation: fadein 1s ease-out;
         }
-        .article_container {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          animation: fadein 1s ease-out;
-        }
         .article_title_container {
           margin: 1em 0 0.4em 0;
           width: 80%;
           text-align: center;
           padding: 0 1em;
+          animation: fadein 1s ease-out;
         }
         .article_title {
           font-size: 1.6em;
@@ -102,6 +82,9 @@ const HomeSection = () => {
         }
 
         @media screen and (max-width: 768px) {
+          .about_container {
+            justify-content: space-around;
+          }
           #my_pic {
             height: 180px;
             border-radius: 90px;
@@ -109,7 +92,6 @@ const HomeSection = () => {
           }
           .top_title {
             font-size: 1.5em;
-            font-family: "Lora", serif;
           }
           .article_title_container {
             text-align: center;
