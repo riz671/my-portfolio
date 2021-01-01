@@ -8,10 +8,10 @@ const SDC = () => {
         Glossier System Design
       </h2>
 
-      <img className="project_images" src="/SDC_pt1.png" alt="" />
-      <img className="project_images" src="/SDC_pt2.png" alt="" />
-      <img className="project_images" src="/SDC_pt3.png" alt="" />
-      <img className="project_images" src="/SDC_pt4.png" alt="" />
+      <img className="SDC_img" src="/SDC_pt1.png" alt="" />
+      <img className="SDC_img" src="/SDC_pt2.png" alt="" />
+      <img className="SDC_img" src="/SDC_pt3.png" alt="" />
+      <img className="SDC_img" src="/SDC_pt4.png" alt="" />
 
       <p className="stack_list center_text">
         JavaScript | PostgreSQL | Mongoose | AWS EC2 | Nginx | loader.io | K6 |
@@ -41,7 +41,7 @@ const SDC = () => {
 
       <LinkButton
         links="https://github.com/riz671/Glossier-system_design"
-        name="GO TO SYSTEM DESIGNS REPO"
+        name="Check 'Glossier's System Design' Repo"
       />
 
       <style jsx>{`
@@ -49,23 +49,26 @@ const SDC = () => {
           width: 100%;
           align-items: center;
           justify-content: center;
+          padding-bottom: 3vh;
         }
         .project_title {
-          font-size: 36px;
+          font-size: 2em;
           letter-spacing: 1px;
+          font-family: "Playfair Display", serif;
+          padding: 0 5vw;
         }
-        .project_images {
+        .SDC_img {
           border: 0.5px solid #708090;
           margin: 0 20% 14px 20%;
           width: 60%;
         }
         .stack_list {
-          font-size: 24px;
+          font-size: 1.3em;
           word-spacing: 5px;
-          margin: 10px 40px;
+          margin: 20px 40px 10px 40px;
         }
         .summary {
-          font-size: 22px;
+          font-size: 1.2em;
           margin: 5px 40px 20px;
         }
         .center_text {
@@ -79,7 +82,26 @@ const SDC = () => {
         }
         ul li {
           padding-bottom: 5px;
-          font-size: 20px;
+          font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 768px) {
+          .project_title {
+            font-size: 1.6em;
+          }
+          .SDC_img {
+            margin: 0 7.5% 14px 7.5%;
+            width: 85%;
+          }
+          .stack_list {
+            font-size: 1.1em;
+          }
+          .summary {
+            font-size: 0.9em;
+          }
+          ul li {
+            font-size: 1em;
+          }
         }
       `}</style>
     </article>

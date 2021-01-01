@@ -24,8 +24,10 @@ const MVP = () => {
 
       <p className="summary center_text">
         <i>
-          A local based trivia game meant to bring people closer together in
-          such trying times.
+          A local based trivia game where players use their trivia knowledge to
+          compete with others on category. Comes with slick and easy-to-use team
+          and categorical selection sections to get players ready for the game
+          ASAP!
         </i>
       </p>
 
@@ -42,7 +44,7 @@ const MVP = () => {
 
       <LinkButton
         links="https://github.com/riz671/KnowItAll"
-        name="GO TO 'KNOW IT ALL' REPO"
+        name="Check 'Know it all' Repo"
       />
 
       <style jsx>{`
@@ -50,18 +52,21 @@ const MVP = () => {
           width: 100%;
           align-items: center;
           justify-content: center;
+          padding-bottom: 3vh;
         }
         .vid_container {
           margin: 0 25%;
         }
         .project_title {
-          font-size: 36px;
+          font-size: 2em;
           letter-spacing: 1px;
+          font-family: "Playfair Display", serif;
+          padding: 0 5vw;
         }
         .stack_list {
-          font-size: 24px;
+          font-size: 1.3em;
           word-spacing: 5px;
-          margin: 10px 40px;
+          margin: 20px 40px 10px 40px;
         }
         .center_text {
           text-align: center;
@@ -70,15 +75,30 @@ const MVP = () => {
           text-decoration: underline;
         }
         .summary {
-          font-size: 22px;
+          font-size: 1.3em;
           margin: 5px 40px 20px;
         }
         ul {
           margin: 0 25px 30px 25px;
         }
         ul li {
-          margin-bottom: 5px;
-          font-size: 20px;
+          padding-bottom: 5px;
+          font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 768px) {
+          .project_title {
+            font-size: 1.6em;
+          }
+          .stack_list {
+            font-size: 1.1em;
+          }
+          .summary {
+            font-size: 0.9em;
+          }
+          ul li {
+            font-size: 1em;
+          }
         }
       `}</style>
     </article>

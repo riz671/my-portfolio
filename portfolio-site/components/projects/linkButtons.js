@@ -2,14 +2,15 @@ import styles from "../../styles/Home.module.css";
 
 const LinkButtons = ({ links, name, target = "_blank" }) => {
   return (
-    <div className=".githubButtonsContainer">
-      <button className="githubButtons">
-        <a href={links} target={target}>
+    <div className="githubButtonsContainer">
+      <a href={links} target={target}>
+        <button className="githubButtons">
           <span>{name}</span>
-        </a>
-      </button>
+        </button>
+      </a>
       <style jsx>{`
         .githubButtonsContainer {
+          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -20,10 +21,12 @@ const LinkButtons = ({ links, name, target = "_blank" }) => {
           border: 0.5px solid black;
           box-shadow: 2px 4px transparent;
           opacity: 1;
+          text-align: center;
           width: 275px;
           transition: 0.3s;
           margin: 2vh 1vw;
           flex: 1;
+          cursor: pointer;
         }
 
         .githubButtons a {

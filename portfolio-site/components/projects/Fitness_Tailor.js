@@ -8,7 +8,15 @@ const Fitness_Tailor = () => {
         Fitness Tailor
       </h2>
 
-      <p className="temp_message center_text">Demo Video will be up soon!</p>
+      <iframe
+        className="vid_container"
+        width="50%"
+        height="380"
+        src="https://www.youtube.com/embed/mnBOrFL3iZ8"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
 
       <p className="stack_list center_text">
         React-Native | React-Hooks | React-Navigation | Expo | Redux | Redux
@@ -32,7 +40,7 @@ const Fitness_Tailor = () => {
 
       <LinkButton
         links="https://github.com/fitness-tailor/fitness-tailor-client"
-        name="GO TO FITNESS TAILOR REPO"
+        name="Check 'Fitness Tailor' Repo"
       />
 
       <style jsx>{`
@@ -40,22 +48,19 @@ const Fitness_Tailor = () => {
           width: 100%;
           align-items: center;
           justify-content: center;
+          padding-bottom: 3vh;
         }
         .vid_container {
           margin: 0 25%;
         }
         .project_title {
-          font-size: 36px;
+          font-size: 2em;
           letter-spacing: 1px;
         }
-        .temp_message {
-          font-size: 30px;
-          margin-bottom: 30px;
-        }
         .stack_list {
-          font-size: 24px;
+          font-size: 1.3em;
           word-spacing: 5px;
-          margin: 10px 40px;
+          margin: 20px 40px 10px 40px;
         }
         .center_text {
           text-align: center;
@@ -64,15 +69,30 @@ const Fitness_Tailor = () => {
           text-decoration: underline;
         }
         .summary {
-          font-size: 22px;
+          font-size: 1.2em;
           margin: 5px 40px 20px;
         }
         ul {
           margin: 0 25px 30px 25px;
         }
         ul li {
-          margin-bottom: 5px;
-          font-size: 20px;
+          padding-bottom: 5px;
+          font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 768px) {
+          .project_title {
+            font-size: 1.6em;
+          }
+          .stack_list {
+            font-size: 1.1em;
+          }
+          .summary {
+            font-size: 0.9em;
+          }
+          ul li {
+            font-size: 1em;
+          }
         }
       `}</style>
     </article>

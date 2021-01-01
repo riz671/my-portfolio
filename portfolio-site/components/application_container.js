@@ -17,13 +17,13 @@ const ApplicationContainer = () => {
 
         <div className="navigate_buttons_container">
           <LinkButton
-            links="#MVP"
-            name="Scroll to 'Know It All'"
+            links="#Fitness_Tailor"
+            name="Scroll to 'Fitness Tailor'"
             target="_self"
           />
           <LinkButton
-            links="#Fitness_Tailor"
-            name="Scroll to 'Fitness Tailor'"
+            links="#MVP"
+            name="Scroll to 'Know It All'"
             target="_self"
           />
           <LinkButton
@@ -38,12 +38,12 @@ const ApplicationContainer = () => {
           />
         </div>
 
-        <section className="main_project_container" id="MVP">
-          <MVP />
-        </section>
-
         <section className="main_project_container" id="Fitness_Tailor">
           <Fitness_Tailor />
+        </section>
+
+        <section className="main_project_container" id="MVP">
+          <MVP />
         </section>
 
         <section className="main_project_container" id="SDC">
@@ -72,7 +72,7 @@ const ApplicationContainer = () => {
           margin: 3vh 5vw;
         }
         .apps_header_container {
-          margin: 1em 0;
+          margin: 1em;
           border-bottom: 1.5px solid black;
           text-align: center;
           padding: 0 1em;
@@ -88,11 +88,11 @@ const ApplicationContainer = () => {
           background: #dcdcdc;
           border: 4px solid black;
           border-radius: 30px;
-          box-shadow: 5px 5px transparent;
+          box-shadow: 3px 3px transparent;
           transition: 0.3s;
         }
         .main_project_container:hover {
-          box-shadow: 10px 8px #add8e6;
+          box-shadow: 10px 10px #60b6d2;
         }
 
         .project_container {
@@ -101,6 +101,12 @@ const ApplicationContainer = () => {
           border: 4px solid black;
           margin-bottom: 3em;
           border-radius: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+          .apps_header {
+            font-size: 1.4em;
+          }
         }
       `}</style>
     </div>

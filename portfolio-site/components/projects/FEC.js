@@ -4,9 +4,9 @@ import LinkButton from "./linkButtons.js";
 const FEC = () => {
   return (
     <article className="project_container">
-      <h2 className="project_title center_text underline_text">
+      <p className="project_title center_text underline_text">
         Alo Yoga Front End Replica
-      </h2>
+      </p>
 
       <iframe
         className="vid_container"
@@ -36,38 +36,43 @@ const FEC = () => {
           input from database.
         </li>
         <li>
-          Combined 4 micro services with my team to display a product page
-          following service-oriented architecture.
+          Combined 4 micro services using proxy servers to display a product
+          page following service-oriented architecture.
         </li>
       </ul>
 
-      <LinkButton
-        links="https://github.com/riz671/AloYoga-navbar_module"
-        name="GO TO NAV BAR MODULE REPO"
-      />
+      <div className="FEC_button_container">
+        <LinkButton
+          links="https://github.com/riz671/AloYoga-navbar_module"
+          name="Check 'Nav Bar Service' Repo"
+        />
 
-      <LinkButton
-        links="https://github.com/riz671/AloYoga-proxy_setup"
-        name="GO TO PROXY SETUP REPO"
-      />
+        <LinkButton
+          links="https://github.com/riz671/AloYoga-proxy_setup"
+          name="Check 'Proxy Service' Repo"
+        />
+      </div>
 
       <style jsx>{`
         .project_container {
           width: 100%;
           align-items: center;
           justify-content: center;
+          padding-bottom: 3vh;
         }
         .vid_container {
           margin: 0 25%;
         }
         .project_title {
-          font-size: 36px;
+          font-size: 2em;
           letter-spacing: 1px;
+          font-family: "Playfair Display", serif;
+          padding: 0 5vw;
         }
         .stack_list {
-          font-size: 24px;
+          font-size: 1.3em;
           word-spacing: 5px;
-          margin: 10px 40px;
+          margin: 20px 40px 10px 40px;
         }
         .center_text {
           text-align: center;
@@ -76,7 +81,7 @@ const FEC = () => {
           text-decoration: underline;
         }
         .summary {
-          font-size: 22px;
+          font-size: 1.1em;
           margin: 5px 40px 20px;
         }
         ul {
@@ -84,7 +89,30 @@ const FEC = () => {
         }
         ul li {
           padding-bottom: 5px;
-          font-size: 20px;
+          font-size: 1.2em;
+        }
+        .FEC_button_container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @media screen and (max-width: 768px) {
+          .project_title {
+            font-size: 1.6em;
+          }
+          .stack_list {
+            font-size: 1.1em;
+          }
+          .summary {
+            font-size: 0.9em;
+          }
+          ul li {
+            font-size: 1em;
+          }
         }
       `}</style>
     </article>
