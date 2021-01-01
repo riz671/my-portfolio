@@ -44,7 +44,7 @@ const JobCatalogue = () => {
         className="btn btn-backward"
         onClick={() => titleTraversal("backward")}
       >
-        <i className="fas fa-chevron-left fa-xs"></i>
+        <i className="fas fa-chevron-left"></i>
       </button>
 
       <p className="job_title">{currItem}</p>
@@ -53,7 +53,7 @@ const JobCatalogue = () => {
         className="btn btn-forward"
         onClick={() => titleTraversal("forward")}
       >
-        <i className="fas fa-chevron-right fa-xs"></i>
+        <i className="fas fa-chevron-right"></i>
       </button>
 
       <style jsx>{`
@@ -63,7 +63,6 @@ const JobCatalogue = () => {
           align-items: center;
           justify-content: center;
           width: 80vw;
-          heigth: 10vh;
         }
         .job_title {
           flex: 9;
@@ -77,15 +76,22 @@ const JobCatalogue = () => {
           flex: 1;
           border: none;
           background: transparent;
+          font-size: 2em;
         }
         @media screen and (max-width: 768px) {
           .job_title {
+            font-size: 1.25em;
+          }
+          .btn {
             font-size: 1.25em;
           }
         }
         @media screen and (max-width: 420px) {
           .job_title {
             font-size: 0.85em;
+          }
+          .btn {
+            font-size: 1.25em;
           }
         }
       `}</style>

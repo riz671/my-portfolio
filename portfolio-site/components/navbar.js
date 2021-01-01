@@ -17,9 +17,9 @@ const NavBar = () => {
       </Head>
 
       <div className="logo-container">
-        <a href="/">
-          <h2 className="logo-title">RC</h2>
-        </a>
+        <h2 className="logo-title">
+          <a href="/">RC</a>
+        </h2>
       </div>
 
       <button className="btn-hamburger">
@@ -81,8 +81,11 @@ const NavBar = () => {
           font-family: "Dancing Script", cursive;
           font-size: 2em;
           width: min-content;
-          border-radius: 15px;
+          cursor: pointer;
+        }
+        .logo-title a {
           background: #6699a3;
+          border-radius: 15px;
           padding: 8px 12px;
         }
         .btn-hamburger {
