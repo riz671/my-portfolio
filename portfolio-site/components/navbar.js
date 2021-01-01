@@ -1,135 +1,237 @@
 import Head from "next/head";
 import Link from "next/link";
+import SocialBar from "./social_bar.js";
+import React, { useEffect } from "react";
 
-const NavBar = () => (
-  <nav className="nav-container">
-    <Head>
-      <title>Rizwan Choudhury</title>
-      <link rel="icon" href="/favicon.png" />
-    </Head>
+const NavBar = () => {
+  useEffect(() => {
+    require("../scripts/navbar_scripts.js");
+  }, []);
 
-    <section id="social" className="social-menu">
-      <ul className="menu-list">
-        <li>
-          <a
-            className="logo-container"
-            href="https://github.com/riz671"
-            target="_blank"
-          >
-            <img
-              className="logo_img"
-              src="/github_logo.png"
-              alt="Github Logo"
-            />
-          </a>
-        </li>
+  return (
+    <nav className="nav-container">
+      <Head>
+        <title>Rizwan Choudhury</title>
+        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-        <li>
-          <a
-            className="logo-container"
-            href="https://www.linkedin.com/in/rizwan-choudhury-670335ab/"
-            target="_blank"
-          >
-            <img
-              className="logo_img"
-              src="/linkedin_logo.png"
-              alt="LinkedIn Logo"
-            />
-          </a>
-        </li>
+      <div className="logo-container">
+        <a href="/">
+          <h2 className="logo-title">RC</h2>
+        </a>
+      </div>
 
-        <li>
-          <a
-            className="logo-container"
-            href="mailto:choudhuryrizwan97@gmail.com"
-            target="_blank"
-          >
-            <img className="logo_img" src="/mail_logo.png" alt="Mail Logo" />
-          </a>
-        </li>
-      </ul>
-    </section>
+      <button className="btn-hamburger">
+        <div className="hamburger-icon">
+          <div className="burger"></div>
+          <div className="burger"></div>
+          <div className="burger"></div>
+        </div>
+      </button>
 
-    <section id="menu" className="nav-menu">
-      <ul className="menu-list">
-        <Link href="/">
-          <li id="Home">
-            <a>Home</a>
+      <section id="menu" className="responsive-nav-menu">
+        <ul className="menu-list">
+          <li>
+            <button className="btn-close">
+              <div className="hamburger-icon">
+                <div className="close-bar"></div>
+                <div className="close-bar rotated"></div>
+              </div>
+            </button>
           </li>
-        </Link>
-        <Link href="/application">
-          <li id="Apps">
-            <a>Apps</a>
-          </li>
-        </Link>
-        <Link href="/My_Resume.pdf">
-          <li id="Resume">
-            <a>Resume</a>
-          </li>
-        </Link>
-        {/* <Link href="/contact">
+          <Link href="/">
+            <li id="Home">
+              <a>Home</a>
+            </li>
+          </Link>
+          <Link href="/application">
+            <li id="Apps">
+              <a>Apps</a>
+            </li>
+          </Link>
+          <Link href="/My_Resume.pdf">
+            <li id="Resume">
+              <a>Resume</a>
+            </li>
+          </Link>
+          {/* <Link href="/contact">
           <li id="Contact">
-            <a>Contact Me</a>
+          <a>Contact Me</a>
           </li>
         </Link> */}
-      </ul>
-    </section>
+          <li>
+            <SocialBar />
+          </li>
+        </ul>
+      </section>
 
-    <style jsx>{`
-      @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap");
-      .nav-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100vw;
-        height: 5em;
-        align-items: start;
-        background-color: black;
-        color: #d3d3d3;
-        align-items: center;
-        padding: 0 2em;
-      }
-      .logo-container {
-        height: 50px;
-        width: 50px;
-        border-bottom: 2px solid transparent;
-      }
-      .logo-container:hover {
-        border-bottom: 2px solid red;
-      }
-      .logo_img {
-        height: 50px;
-        width: 50px;
-        border-radius: 25px;
-      }
-      .nav-menu {
-        align-items: center;
-      }
-      .menu-list {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        padding: 0 30px;
-      }
-      .menu-list li {
-        padding: 0 0.5rem;
-        font-size: 1.5em;
-        line-height: 1em;
-        padding: 0.1em 0.1em;
-        margin-right: 4px;
-      }
-      .menu-list li a {
-        cursor: pointer;
-        padding: 0 10px 5px 10px;
-        border-bottom: 2px solid transparent;
-        transition: 0.4s;
-      }
-      .menu-list li a:hover {
-        border-bottom: 2px solid red;
-      }
-    `}</style>
-  </nav>
-);
+      <style jsx>{`
+        .nav-container {
+          display: flex;
+          width: 100vw;
+          height: 10vh;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #006666;
+          color: #fffceb;
+          padding: 0 4em;
+        }
+        .logo-title {
+          font-family: "Dancing Script", cursive;
+          font-size: 2em;
+          width: min-content;
+          border-radius: 15px;
+          background: #6699a3;
+          padding: 8px 12px;
+        }
+        .btn-hamburger {
+          display: none;
+        }
+        .btn-close {
+          display: none;
+        }
+        .responsive-nav-menu {
+          display: block;
+          flex: 0;
+        }
+        .menu-list {
+          list-style-type: none;
+          display: flex;
+          flex-direction: row;
+        }
+        .menu-list li {
+          font-size: 1.5em;
+        }
+        .menu-list li a {
+          cursor: pointer;
+          padding: 0 10px 5px 10px;
+          border-bottom: 2px solid transparent;
+          font-family: "Poppins", sans-serif;
+          transition: 0.4s;
+          margin: 0 10px;
+        }
+        .menu-list li a:hover {
+          border-bottom: 2px solid #99c2bc;
+        }
+
+        @media screen and (max-width: 900px) {
+          .logo-title {
+            font-size: 1.5em;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          body {
+            overflow-x: hidden;
+          }
+          .nav-container {
+            padding: 0 2em;
+          }
+          .logo-container {
+            flex: 1;
+          }
+          .logo-title {
+            font-size: 1.25em;
+          }
+          .btn-hamburger {
+            display: block;
+            background-color: transparent;
+            border: none;
+            flex: 1;
+            max-width: 50px;
+            height: 70%;
+          }
+          .hamburger-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+          }
+          .burger {
+            background-color: #fffceb;
+            width: 35px;
+            height: 6px;
+            margin: 4px 0;
+          }
+          .btn-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            border: 0px solid transparent;
+            border-radius: 25px;
+            margin: 20px 0;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            flex: 1;
+            transition: 0.1s;
+          }
+          .btn-close:hover {
+            background-color: red;
+            outline: none;
+          }
+          .close-bar {
+            background-color: #2e2623;
+            width: 30px;
+            height: 6px;
+            transform: rotate(45deg);
+          }
+          .rotated {
+            margin-top: -6px;
+            transform: rotate(-45deg);
+          }
+          .menu-list {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 70vw;
+            height: 100vh;
+            right: 0;
+            top: 0;
+            margin: 0 auto;
+            padding: 0;
+            border-left: 0.2px solid #999999;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in-out;
+            z-index: 15;
+            background: -webkit-linear-gradient(
+              360deg,
+              #83c39d 30%,
+              #9fd1b3 70%
+            );
+          }
+          .menu-list li {
+            font-size: 1.25em;
+            margin: 3.5vh 0;
+            color: #2e2623;
+            transform: opacity 1s ease-in;
+          }
+          .menu-list li a {
+            padding: 0;
+            border-bottom: 2px solid transparent;
+          }
+          .active-menu {
+            display: flex;
+            transform: translateX(0%);
+            overflow: hidden;
+          }
+          .darken {
+            background-color: black;
+            opacity: 0.4;
+          }
+        }
+        @media screen and (max-width: 320px) {
+          .logo-title {
+            font-size: 0.9em;
+          }
+        }
+      `}</style>
+    </nav>
+  );
+};
 
 export default NavBar;

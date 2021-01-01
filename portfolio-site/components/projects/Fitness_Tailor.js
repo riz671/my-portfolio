@@ -1,57 +1,47 @@
 import styles from "../../styles/Home.module.css";
 import LinkButton from "./linkButtons.js";
 
-const FEC = () => {
+const Fitness_Tailor = () => {
   return (
     <article className="project_container">
-      <p className="project_title center_text underline_text">
-        Alo Yoga Front End Replica
-      </p>
+      <h2 className="project_title center_text underline_text">
+        Fitness Tailor
+      </h2>
 
       <iframe
         className="vid_container"
         width="50%"
         height="380"
-        src="https://www.youtube.com/embed/ijdXIiaMoKw"
+        src="https://www.youtube.com/embed/mnBOrFL3iZ8"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
 
       <p className="stack_list center_text">
-        React | JavaScript | CSS | HTML | Mongoose | Jest
+        React-Native | React-Hooks | React-Navigation | Expo | Redux | Redux
+        Thunk | Firebase | RESTful API
       </p>
-
       <p className="summary center_text">
-        <i>Replica of Alo Yoga's product page site.</i>
+        Be your best self as <em>you</em> tailor make your fitness journey.
       </p>
 
       <ul>
+        <li>Improved code readability and reusability with React-hooks.</li>
         <li>
-          Designed menu display for authentication, cart, and multiple
-          categories in the navigation bar with React and CSS.
+          Integrated Redux as state management strategy to simplify state logic.
         </li>
         <li>
-          Implemented search functionality that queried entries similar to user
-          input from database.
-        </li>
-        <li>
-          Combined 4 micro services using proxy servers to display a product
-          page following service-oriented architecture.
+          Designed UI for the Recipe Finder component and implemented
+          asynchronous back-end logic to query and store data from USDA’s
+          nutritional API via Redux Thunk.
         </li>
       </ul>
 
-      <div className="FEC_button_container">
-        <LinkButton
-          links="https://github.com/riz671/AloYoga-navbar_module"
-          name="Check 'Nav Bar Service' Repo"
-        />
-
-        <LinkButton
-          links="https://github.com/riz671/AloYoga-proxy_setup"
-          name="Check 'Proxy Service' Repo"
-        />
-      </div>
+      <LinkButton
+        links="https://github.com/fitness-tailor/fitness-tailor-client"
+        name="Check 'Fitness Tailor' Repo"
+      />
 
       <style jsx>{`
         .project_container {
@@ -66,8 +56,6 @@ const FEC = () => {
         .project_title {
           font-size: 2em;
           letter-spacing: 1px;
-          font-family: "Playfair Display", serif;
-          padding: 0 5vw;
         }
         .stack_list {
           font-size: 1.3em;
@@ -81,7 +69,7 @@ const FEC = () => {
           text-decoration: underline;
         }
         .summary {
-          font-size: 1.1em;
+          font-size: 1.2em;
           margin: 5px 40px 20px;
         }
         ul {
@@ -90,14 +78,6 @@ const FEC = () => {
         ul li {
           padding-bottom: 5px;
           font-size: 1.2em;
-        }
-        .FEC_button_container {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         @media screen and (max-width: 768px) {
@@ -119,4 +99,4 @@ const FEC = () => {
   );
 };
 
-export default FEC;
+export default Fitness_Tailor;

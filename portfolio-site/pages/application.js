@@ -11,7 +11,7 @@ export default function Home() {
         <NavBar />
       </section>
 
-      <div className={styles.fadeIn}>
+      <div>
         <section id="about_me">
           <ApplicationContainer />
         </section>

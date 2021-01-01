@@ -1,90 +1,147 @@
 import styles from "../styles/Home.module.css";
+import JobCatalogue from "./job_catalogue.js";
 
-const About_Me = () => {
+const AboutSection = () => {
   return (
-    <div className="home_container">
-      <section className="about_container">
-        <div className="about_picture">
-          <img id="my_pic" src="/Self_Pic.png" alt="" />
+    <div className="about_container">
+      <article className="article_container">
+        <div className="article-title_container">
+          <p className="article-title">About Me</p>
         </div>
 
-        <article className="about_article_container">
-          <div className="about_header_container">
-            <p className="about_header">
-              <strong>About</strong>
-            </p>
-          </div>
-          <div className="my_article_text_container">
-            <p className="my_article_text">
-              I am Rizwan Choudhury, a Fullstack Software Engineer with
-              experience in Javascript, React, Nginx, Node.js, Express,
-              PostgreSQL and more.
-            </p>
+        <div className="article_main_container">
+          <p className="article_main">
+            I am a software engineer who enjoys brainstorming ideas in my head
+            and bringing them to life. When working, I emphasize building
+            easy-to-use and stylish features with incredible user experience. I
+            value delivering clear and concise code as well.
+            <br />
+            <br />
+            I cherish working with others even more than working by myself.
+            There is nothing like the thrill of discussing and implementing
+            ideas with others to me.
+            <br />
+            <br />
+            Let's work together to build something great. I am motivated to be
+            better than I was yesterday with you.
+          </p>
+        </div>
+      </article>
 
-            <p className="my_article_text">
-              My greatest passion is to build. I inspire to engineer software
-              applications. Combine these two, you get my ultimate destination -
-              to design performant applications.
-            </p>
-
-            <p className="my_article_text">
-              Let's work together to build something great.
-            </p>
-          </div>
-        </article>
+      <section className="pic_container">
+        <img
+          id="about_pic"
+          src="/About_Pic.jpg"
+          alt="Picture next to about me section"
+        />
       </section>
 
-      <section id="branding video"></section>
-
       <style jsx>{`
-        .home_container {
-          display: flex;
-          flex-direction: column;
-          width: 100vw;
-          margin: 1em 0 2em 0;
-          justify-content: center;
-          align-items: center;
-        }
         .about_container {
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 90vw;
-          margin-bottom: 2em;
+          flex-direction: row;
+          padding: 0 3vw 0 1vw;
+          min-height: 100vh;
         }
-        #my_pic {
-          height: 200px;
-          border-radius: 150px;
-          margin: 1.5em;
-        }
-        .about_article_container {
+        .article_container {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          opacity: 0.9;
+          flex: 2;
+          padding: 3vh 0 5vh 0;
+          animation: fadein 1s ease-out;
         }
-        .about_header_container {
-          margin-bottom: 0.3em;
+        .article-title_container {
+          margin: 1em 0;
+          border-bottom: 1px solid black;
           text-align: center;
-          border-bottom: 3px solid black;
           padding: 0 1em;
         }
-        .about_header {
-          font-family: "Open Sans", sans-serif;
-          font-size: 1.5em;
+        .article-title {
+          font-size: 1.6em;
           margin-bottom: 0.5em;
         }
-        .my_article_text_container {
+        .article_main_container {
           width: 80%;
         }
-        .my_article_text {
-          font-size: 1.5em;
+        .article_main {
+          font-size: 1.2em;
           text-align: center;
+          margin: 0;
+        }
+        .pic_container {
+          margin: 5vw 0 2vw 0;
+          animation: fadein 1s ease-out;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+        }
+        #about_pic {
+          width: 80%;
+          border-radius: 25px;
+          border: 0.5px solid #70bdd7;
+          box-shadow: 5px 4px transparent;
+          transition: 0.5s;
+        }
+        #about_pic:hover {
+          box-shadow: 10px 10px #28768f;
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          .about_container {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0 3vw;
+          }
+          .article_container {
+            flex: none;
+            padding-top: 0;
+          }
+          .article-title_container {
+            padding: 0 0.75em;
+            margin-top: 0;
+          }
+          .article-title {
+            font-size: 1.1em;
+            margin-bottom: 0.5em;
+          }
+          .article_main {
+            font-size: 0.8em;
+          }
+          #about_pic {
+            width: 200px;
+            border-radius: 25px;
+          }
+        }
+
+        @media screen and (max-width: 420px) {
+          #about_pic {
+            width: 150px;
+            border-radius: 25px;
+          }
+        }
+
+        @media screen and (max-width: 250px) {
+          #about_pic {
+            width: 80px;
+            border-radius: 25px;
+          }
         }
       `}</style>
     </div>
   );
 };
 
-export default About_Me;
+export default AboutSection;
