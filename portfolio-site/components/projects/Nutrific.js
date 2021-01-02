@@ -1,12 +1,10 @@
 import styles from "../../styles/Home.module.css";
 import LinkButton from "./linkButtons.js";
 
-const Fitness_Tailor = () => {
+const Nutrific = () => {
   return (
     <article className="project_container">
-      <h2 className="project_title center_text underline_text">
-        Fitness Tailor
-      </h2>
+      <h2 className="project_title center_text underline_text">Nutrific</h2>
 
       <iframe
         className="vid_container"
@@ -39,8 +37,8 @@ const Fitness_Tailor = () => {
       </ul>
 
       <LinkButton
-        links="https://github.com/fitness-tailor/fitness-tailor-client"
-        name="Check 'Fitness Tailor' Repo"
+        links="https://github.com/nutrific/nutrific-client"
+        name="Check 'Nutrific' Repo"
       />
 
       <style jsx>{`
@@ -99,4 +97,4 @@ const Fitness_Tailor = () => {
   );
 };
 
-export default Fitness_Tailor;
+export default Nutrific;

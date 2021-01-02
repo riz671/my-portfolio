@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import FEC from "./projects/FEC.js";
 import SDC from "./projects/SDC.js";
 import MVP from "./projects/MVP.js";
-import Fitness_Tailor from "./projects/Fitness_Tailor.js";
+import Nutrific from "./projects/Nutrific.js";
 import LinkButton from "./projects/linkButtons.js";
 
 const ApplicationContainer = () => {
@@ -17,7 +17,7 @@ const ApplicationContainer = () => {
 
         <div className="navigate_buttons_container">
           <LinkButton
-            links="#Fitness_Tailor"
+            links="#Nutrific"
             name="Scroll to 'Fitness Tailor'"
             target="_self"
           />
@@ -38,8 +38,8 @@ const ApplicationContainer = () => {
           />
         </div>
 
-        <section className="main_project_container" id="Fitness_Tailor">
-          <Fitness_Tailor />
+        <section className="main_project_container" id="Nutrific">
+          <Nutrific />
         </section>
 
         <section className="main_project_container" id="MVP">
