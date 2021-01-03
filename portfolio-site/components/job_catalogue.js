@@ -4,57 +4,13 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "@fortawesome/fontawesome-free/js/solid";
 
 const JobCatalogue = () => {
-  const [jobTitle, setJobTitle] = useState([
-    "Full-Stack Developer",
-    "Front-End Engineer",
-    "Back-End Engineer",
-  ]);
-  const [currIndex, setCurrIndex] = useState(0);
-  const [currItem, setCurrItem] = useState(jobTitle[currIndex]);
-
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   let index = !jobTitle[currIndex + 1] ? 0 : currIndex + 1;
-    //   setCurrIndex(index);
-    // }, 2000);
-    // return () => clearInterval(interval);
+    require("../scripts/typewriter.js");
   }, []);
-
-  const titleTraversal = (order) => {
-    let index = currIndex;
-    if (order === "forward") {
-      index++;
-    } else if (order === "backward") {
-      index--;
-    }
-
-    if (index < 0) {
-      index = jobTitle.length - 1;
-    } else if (index >= jobTitle.length) {
-      index = 0;
-    }
-
-    setCurrIndex(index);
-    return setCurrItem(jobTitle[index]);
-  };
 
   return (
     <div className="job-carousel_containter">
-      <button
-        className="btn btn-backward"
-        onClick={() => titleTraversal("backward")}
-      >
-        <i className="fas fa-chevron-left"></i>
-      </button>
-
-      <p className="job_title">{currItem}</p>
-
-      <button
-        className="btn btn-forward"
-        onClick={() => titleTraversal("forward")}
-      >
-        <i className="fas fa-chevron-right"></i>
-      </button>
+      <h1 className="job_title typewriter_animation" />
 
       <style jsx>{`
         .job-carousel_containter {
@@ -62,36 +18,34 @@ const JobCatalogue = () => {
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          width: 80vw;
+          margin: 0 10vw;
         }
         .job_title {
-          flex: 9;
           font-size: 2.25em;
           font-family: "Poppins", sans-serif;
-          padding: 0 5vw;
+          border-right: 2px solid black;
+          padding-right: 5px;
           text-align: center;
           margin: 0;
         }
-        .btn {
-          flex: 1;
-          border: none;
-          background: transparent;
-          font-size: 2em;
+
+        .typewriter_animation {
+          animation: blinkTextCursor 1000ms steps(44) infinite normal;
         }
+
+        @keyframes blinkTextCursor {
+          from {
+            border-right-color: black;
+          }
+          to {
+            border-right-color: transparent;
+          }
+        }
+
         @media screen and (max-width: 768px) {
           .job_title {
             font-size: 1.25em;
-          }
-          .btn {
-            font-size: 1.25em;
-          }
-        }
-        @media screen and (max-width: 420px) {
-          .job_title {
-            font-size: 0.85em;
-          }
-          .btn {
-            font-size: 1.25em;
+            padding-right: 2.5px;
           }
         }
       `}</style>
