@@ -4,13 +4,15 @@ import "@fortawesome/fontawesome-free/js/brands";
 import "@fortawesome/fontawesome-free/js/solid";
 
 const JobCatalogue = () => {
-  useEffect(() => {
-    require("../scripts/typewriter.js");
-  }, []);
+  // useEffect(() => {
+  //   require("../scripts/typewriter.js");
+  // }, []);
 
   return (
     <div className="job-carousel_containter">
-      <h1 className="job_title typewriter_animation"></h1>
+      {/* TODO: ADD typewriter_animation as className for h1 tag*/}
+      {/* if I ever implement typewriter element later on*/}
+      <h1 className="job_title">Full Stack Developer</h1>
 
       <style jsx>{`
         .job-carousel_containter {
@@ -23,14 +25,25 @@ const JobCatalogue = () => {
         .job_title {
           font-size: 2.25em;
           font-family: "Poppins", sans-serif;
-          border-right: 2px solid black;
           padding-right: 5px;
           text-align: center;
           margin: 0;
+          animation: fadeInFromLeft 1000ms ease-out;
         }
 
         .typewriter_animation {
           animation: blinkTextCursor 1000ms steps(44) infinite normal;
+        }
+
+        @keyframes fadeInFromLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
 
         @keyframes blinkTextCursor {
