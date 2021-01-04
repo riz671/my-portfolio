@@ -41,29 +41,32 @@ const HomeSection = () => {
           width: 80%;
           font-family: "Lora", serif;
           margin: 3vw;
+          animation: fadeInFromLeft 0.75s ease-out;
         }
         .pic_container {
           margin: 5vw 0 2vw 0;
-          animation: fadein 1s ease-out;
+          animation: fadeInFromLeft 1.25s ease-out;
         }
         .article_title_container {
           margin: 1em 0 0.4em 0;
           width: 80%;
           text-align: center;
           padding: 0 1em;
-          animation: fadein 1s ease-out;
+          animation: fadeInFromLeft 1.5s ease-out;
         }
         .article_title {
           font-size: 1.6em;
           margin-bottom: 0.5em;
         }
 
-        @keyframes fadein {
+        @keyframes fadeInFromLeft {
           from {
             opacity: 0;
+            transform: translateX(-40px);
           }
           to {
             opacity: 1;
+            transform: translateX(0);
           }
         }
 
