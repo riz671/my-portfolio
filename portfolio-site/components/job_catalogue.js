@@ -10,7 +10,7 @@ const JobCatalogue = () => {
 
   return (
     <div className="job-carousel_containter">
-      <h1 className="job_title typewriter_animation" />
+      <h1 className="job_title typewriter_animation"></h1>
 
       <style jsx>{`
         .job-carousel_containter {
