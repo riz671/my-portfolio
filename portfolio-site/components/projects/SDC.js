@@ -1,5 +1,7 @@
 import styles from "../../styles/Home.module.css";
 import LinkButton from "./linkButtons.js";
+import React, { useState, useEffect } from "react";
+import { Carousel } from "react-responsive-carousel";
 
 const SDC = () => {
   return (
@@ -8,10 +10,34 @@ const SDC = () => {
         Glossier System Design
       </h2>
 
-      <img className="SDC_img" src="/SDC_pt1.png" alt="" />
-      <img className="SDC_img" src="/SDC_pt2.png" alt="" />
-      <img className="SDC_img" src="/SDC_pt3.png" alt="" />
-      <img className="SDC_img" src="/SDC_pt4.png" alt="" />
+      <Carousel>
+        <div>
+          <img className="carousel_img" src="/SDC_pt1.png" alt="" />
+          <p className="legend">
+            Part 1: Refactor database to PostgreSQL and bechmark with 100
+            datasets
+          </p>
+        </div>
+        <div>
+          <img className="carousel_img" src="/SDC_pt2.png" alt="" />
+          <p className="legend">
+            Part 2: Benchmarking PostgreSQL vs MongoDB with ~35 million datasets
+          </p>
+        </div>
+        <div>
+          <img className="carousel_img" src="/SDC_pt3.png" alt="" />
+          <p className="legend">
+            Part 3: Transfer service from local to AWS EC2 instance in cloud
+          </p>
+        </div>
+        <div>
+          <img className="carousel_img" src="/SDC_pt4.png" alt="" />
+          <p className="legend">
+            Part 4: Scale to 4 EC2 instances w/ load balancer. Goal: Horizantal
+            scale app to handle more user traffic.
+          </p>
+        </div>
+      </Carousel>
 
       <p className="stack_list center_text">
         JavaScript | PostgreSQL | Mongoose | AWS EC2 | Nginx | loader.io | K6 |
@@ -57,10 +83,19 @@ const SDC = () => {
           font-family: "Playfair Display", serif;
           padding: 0 5vw;
         }
-        .SDC_img {
+        .carousel_width {
+          width: 85%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 2.5% 7.5% 0 7.5%;
+        }
+        .carousel_img {
           border: 0.5px solid #708090;
-          margin: 0 20% 14px 20%;
-          width: 60%;
+          margin: 0;
+        }
+        .SDC_img {
+          display: none;
         }
         .stack_list {
           font-size: 1.3em;
@@ -70,6 +105,9 @@ const SDC = () => {
         .summary {
           font-size: 1.2em;
           margin: 5px 40px 20px;
+        }
+        .legend {
+          font-size: 40px;
         }
         .center_text {
           text-align: center;
@@ -89,9 +127,13 @@ const SDC = () => {
           .project_title {
             font-size: 1.6em;
           }
+          .carousel-root {
+            margin: 0 2vw;
+          }
           .SDC_img {
-            margin: 0 7.5% 14px 7.5%;
-            width: 85%;
+            border: 0.5px solid #708090;
+            width: 100%;
+            margin: 0;
           }
           .stack_list {
             font-size: 1.1em;
