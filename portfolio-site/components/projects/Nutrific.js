@@ -5,7 +5,6 @@ const Nutrific = () => {
   return (
     <article className="project_container">
       <h2 className="project_title center_text underline_text">Nutrific</h2>
-
       <iframe
         className="vid_container"
         width="50%"
@@ -15,7 +14,6 @@ const Nutrific = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-
       <p className="stack_list center_text">
         React-Native | React-Hooks | React-Navigation | Expo | Redux | Redux
         Thunk | Firebase | RESTful API
@@ -25,22 +23,29 @@ const Nutrific = () => {
       </p>
 
       <ul>
-        <li>Improved code readability and reusability with React-hooks.</li>
         <li>
-          Integrated Redux as state management strategy to simplify state logic.
+          Designed interactive UI to raise user engagement and experience.
         </li>
         <li>
-          Designed UI for the Recipe Finder component and implemented
-          asynchronous back-end logic to query and store data from USDA’s
-          nutritional API via Redux Thunk.
+          Accelerated development speed by modifying state management systems
+          via Redux.
+        </li>
+        <li>
+          Incorporated data fetching via API service to present nutritional data
+          to users.
+        </li>
+        <li>
+          Implement smooth journaling feature with calendar service to store
+          user nutrition data over months.
+        </li>
+        <li>
+          Configured Google Firebase Realtime Database to store user data.
         </li>
       </ul>
-
       <LinkButton
         links="https://github.com/nutrific/nutrific-client"
         name="Check 'Nutrific' Repo"
       />
-
       <style jsx>{`
         .project_container {
           width: 100%;

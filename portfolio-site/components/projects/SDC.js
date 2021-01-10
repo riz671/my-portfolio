@@ -33,8 +33,8 @@ const SDC = () => {
         <div>
           <img className="carousel_img" src="/SDC_pt4.png" alt="" />
           <p className="legend">
-            Part 4: Scale to 4 EC2 instances w/ load balancer. Goal: Horizantal
-            scale app to handle more user traffic.
+            Part 4: Horizontally scale to 4 EC2 instances w/ load balancers to
+            drastically increase capacity of user traffic.
           </p>
         </div>
       </Carousel>
